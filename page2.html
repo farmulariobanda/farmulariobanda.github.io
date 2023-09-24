@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleccionar un nombre y apellido</title>
+    <script src="resource/generarPDF.js"></script>
+     <script src="calcularPrecios.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-4">
+ <div class="rounded p-4 shadow mb-4" style="background-color: #FFFFFF;">
+    <h4 class="mt-4">Seleccionar un registro:</h4>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <label for="lema">Lema</label>
+            <input type="text" id="lema" class="form-control" placeholder="Lema" value="La Mejor Banda Sinaloense">
+        </div>
+        <div class="col-md-6">
+            <label for="banda">Nombre de la banda</label>
+            <input type="text" id="banda" class="form-control" placeholder="Nombre banda" value="Banda Grupo Fuerte">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <!-- Primera fila -->
+        <div class="col-md-12">
+            <label for="miSelect">Seleccionar un nombre:</label>
+            <select id="miSelect" class="form-control">
+            </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Segunda fila -->
+        <div class="col-md-4">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col-md-4">
+            <label for="segundo">Segundo:</label>
+            <input type="text" id="segundo" class="form-control" placeholder="Segundo">
+        </div>
+        <div class="col-md-4">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" class="form-control" placeholder="Apellido">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Tercera fila -->
+        <div class="col-md-6">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" class="form-control" placeholder="Teléfono">
+        </div>
+        <div class="col-md-6">
+            <label for="fecha">Fecha:</label>
+            <input type="text" id="fecha" class="form-control" placeholder="Fecha">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Cuarta fila -->
+        <div class="col-md-6">
+            <label for="horaInicio">Hora de inicio:</label>
+            <input type="text" id="horaInicio" class="form-control" placeholder="Hora de inicio">
+        </div>
+        <div class="col-md-6">
+            <label for="horaFin">Hora de Fin:</label>
+            <input type="text" id="horaFin" class="form-control" placeholder="Hora de Fin">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Quinta fila -->
+        <div class="col-md-4">
+            <label for="calle">Calle y nùmeri:</label>
+            <input type="text" id="calle" class="form-control" placeholder="Calle">
+        </div>
+        <div class="col-md-2">
+            <label for="numExterno">Número Externo:</label>
+            <input type="text" id="numExterno" class="form-control" placeholder="Número Externo">
+        </div>
+		<div class="col-md-6">
+            <label for="colonia">Colonia:</label>
+            <input type="text" id="colonia" class="form-control" placeholder="Colonia">
+        </div>
+    </div>
+    <div class="row mt-3">
+            <!-- Quinta fila -->
+            <div class="col-md-6">
+                <label for="municipio">Municipio/alcaldia:</label>
+                <input type="text" id="municipio" class="form-control" placeholder="Mucipio o alcaldìa">
+            </div>
+            <div class="col-md-6">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" class="form-control" placeholder="Estado">
+            </div>
+        </div>
+    <div class="row mt-3">
+        <!-- Séptima fila -->
+        <div class="col-md-6">
+            <label for="turnos">Turnos:</label>
+            <input type="text" id="turnos" class="form-control" placeholder="Turnos">
+        </div>
+        <div class="col-md-6">
+            <label for="turnos2">Seleccione un turno:</label>
+            <select id="turnos2" class="form-control">
+                <option value="">Seleccione un turno</option>
+                <option value="1">1 turno</option>
+                <option value="2">2 turnos</option>
+                <option value="3">3 turnos</option>
+                <option value="4">4 turnos</option>
+                <option value="5">5 turnos</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Octava fila -->
+        <div class="col-md-4">
+            <label for="precioFinal">Precio Final:</label>
+            <input type="text" id="precioFinal" class="form-control" placeholder="Precio Final">
+        </div>
+        <div class="col-md-4">
+            <label for="porcentaje1">Porcentaje 1:</label>
+            <input type="text" id="porcentaje1" class="form-control" placeholder="Porcentaje 1">
+        </div>
+        <div class="col-md-4">
+            <label for="porcentaje2">Porcentaje 2:</label>
+            <input type="text" id="porcentaje2" class="form-control" placeholder="Porcentaje 2">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Novena fila -->
+        <div class="col-md-12">
+            <label for="precioLetra">Cantidad con letra:</label>
+            <input type="text" id="precioLetra" class="form-control" placeholder="Cantidad con letra">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Décima fila -->
+        <div class="col-md-6">
+            <label for="precioPorcentaje1">Precio porcentaje 1:</label>
+            <input type="text" id="precioPorcentaje1" class="form-control" placeholder="Precio porcentaje 1">
+        </div>
+        <div class="col-md-6">
+            <label for="precioPorcentaje2">Precio porcentaje 2:</label>
+            <input type="text" id="precioPorcentaje2" class="form-control" placeholder="Precio porcentaje 2">
+        </div>
+    </div>
+<div class="row mt-6">
+        <div class="col-md-12">
+            <label for="prestatario">Nombre del prestatario del servicio:</label>
+            <input type="text" id="prestatario" class="form-control" placeholder="Prestatario" value="Alan Fernando Rosas Nájera">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <!-- Botón -->
+        <div class="col-md-12">
+            <button id="generarPDFButton" class="btn btn-primary mt-3">Generar PDF</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var generarPDFButton = document.getElementById('generarPDFButton');
+
+    generarPDFButton.addEventListener('click', function () {
+        generarPDF(); // Llama a la función generarPDF() desde el archivo externo
+    });
+        // Obtener una referencia al elemento <select> y a los campos <input>
+        var select = document.getElementById('miSelect');
+        var nombreInput = document.getElementById('nombre');
+        var segundoInput = document.getElementById('segundo');
+        var apellidoInput = document.getElementById('apellido');
+        var telefonoInput = document.getElementById('telefono');
+        var fechaInput = document.getElementById('fecha');
+        var horaInicioInput = document.getElementById('horaInicio');
+        var horaFinInput = document.getElementById('horaFin');
+        var turnosInput = document.getElementById('turnos');
+        var calleInput = document.getElementById('calle');
+        var coloniaInput = document.getElementById('colonia');
+        var municipioInput = document.getElementById('municipio');
+        var estadoInput = document.getElementById('estado');
+        var numExternoInput = document.getElementById('numExterno');
+        /*var bandaInput = document.getElementById('banda');
+        var lemaInput = document.getElementById('lema'); */
+        // Hacer una solicitud AJAX para obtener las opciones desde el archivo PHP
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'file.php', true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Parsear la respuesta JSON
+                var data = JSON.parse(xhr.responseText);
+
+                // Llenar el <select> con las opciones
+                for (var i = 0; i < data.length; i++) {
+                    var option = document.createElement('option');
+                    option.text = data[i].nombre + ' ' + data[i].segundo + ' ' + data[i].apellido;
+                    select.appendChild(option);
+                }
+
+                // Escuchar el evento "change" en el elemento <select>
+                select.addEventListener('change', function () {
+                    var selectedIndex = this.selectedIndex;
+                    var selectedData = data[selectedIndex];
+
+                    // Llenar los campos <input> con los datos seleccionados
+                    if (selectedData) {
+                        nombreInput.value = selectedData.nombre || '';
+                        segundoInput.value = selectedData.segundo || '';
+                        apellidoInput.value = selectedData.apellido || '';
+                        telefonoInput.value = selectedData.telefono || '';
+                        fechaInput.value = selectedData.fecha || '';
+                        horaInicioInput.value = selectedData.horaInicio || '';
+                        horaFinInput.value = selectedData.horaFin || '';
+                        turnosInput.value = selectedData.turnos || '';
+                        calleInput.value = selectedData.calle || '';
+                        coloniaInput.value = selectedData.colonia || '';
+                        municipioInput.value = selectedData.municipio || '';
+                        estadoInput.value = selectedData.estado || '';
+                        numExternoInput.value = selectedData.numExterno || '';
+                    } else {
+                        // Si se selecciona una opción inválida, borra los campos <input>
+                        nombreInput.value = '';
+                        segundoInput.value = '';
+                        apellidoInput.value = '';
+                        telefonoInput.value = '';
+                        fechaInput.value = '';
+                        horaInicioInput.value = '';
+                        horaFinInput.value = '';
+                        turnosInput.value = '';
+                        calleInput.value = '';
+                        coloniaInput.value = '';
+                        estadoInput.value = '';
+                        municipioInput.value = '';
+                        numExternoInput.value = '';
+                    }
+                });
+            }
+        };
+
+        xhr.send();});
+    </script>
+   
+        <a href="eliminar.html"><button>Ir a Eliminar</button></a>
+
+</body>
+</html>
